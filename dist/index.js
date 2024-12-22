@@ -445,7 +445,7 @@ function submitAnswers() {
         if (score == loadedAnswers.length) {
             result.textContent = `Správně!`;
             link.disabled = false;
-            button.textContent = "Pokračovat";
+            button.textContent = "Zkusit znovu";
         }
     }
     else {

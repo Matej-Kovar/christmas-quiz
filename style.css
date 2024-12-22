@@ -80,3 +80,6 @@ body {
     flex-wrap: wrap;
     justify-content: center;
   }
+  video{
+    width: 100%;
+  }
