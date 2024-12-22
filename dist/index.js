@@ -433,13 +433,16 @@ function submitAnswers() {
         }
         let score = 0;
         for (let i = 0; i < loadedAnswers.length; i++) {
+            const correctAnswer = document.querySelector(`input[name="q${i+1}"][value="${loadedAnswers[i]}"]`)
+            correctAnswer.parentElement.style.color = "green"
+            correctAnswer.parentElement.style.fontWeight = "600"
             if (submitedAnswers[i].value == loadedAnswers[i].toString()) {
                 score++;
             }
             else {
                 result.textContent = `Otázka číslo ${i} špatně. Zkus to znovu`;
                 button.textContent = "Zkusit znovu";
-                break;
+                //break;
             }
         }
         if (score == loadedAnswers.length) {
