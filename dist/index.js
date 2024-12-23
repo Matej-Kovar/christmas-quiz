@@ -440,7 +440,7 @@ function submitAnswers() {
                 score++;
             }
             else {
-                result.textContent = `Otázka číslo ${i} špatně. Zkus to znovu`;
+                result.textContent = `Otázka číslo ${i+1} špatně. Zkus to znovu`;
                 button.textContent = "Zkusit znovu";
                 //break;
             }
