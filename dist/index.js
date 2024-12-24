@@ -449,8 +449,8 @@ function submitAnswers() {
             result.textContent = `Správně!`;
             link.disabled = false;
             button.textContent = "Zkusit znovu";
-            button.style.backgroundColor = "whitesmoke"
-            link.style.backgroundColor = "blue"
+            button.remove();
+            link.style.backgroundColor = "deepskyblue"
         }
     }
     else {
