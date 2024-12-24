@@ -451,6 +451,7 @@ function submitAnswers() {
             button.textContent = "Zkusit znovu";
             button.remove();
             link.style.backgroundColor = "deepskyblue"
+            link.style.color = "white"
         }
     }
     else {
