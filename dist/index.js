@@ -1,8 +1,6 @@
 "use strict";
 let loadedAnswers = [];
 window.onload = function loadQuestions() {
-    const link = document.getElementById("link");
-    link.disabled = true;
     let Questions = [
         {
             questionType: QuestionType.Science,
@@ -417,7 +415,6 @@ var QuestionType;
     QuestionType[QuestionType["Sport"] = 5] = "Sport";
 })(QuestionType || (QuestionType = {}));
 function submitAnswers() {
-    const link = document.getElementById("link");
     const button = document.getElementById("submit");
     if (button.textContent == "Potvrdit") {
         const submitedAnswers = document.querySelectorAll(".options input[type='radio']:checked");
@@ -440,18 +437,14 @@ function submitAnswers() {
                 score++;
             }
             else {
-                result.textContent = `ŠSpatně. Zkus to znovu`;
+                result.textContent = `Špatně. Zkus to znovu`;
                 button.textContent = "Zkusit znovu";
                 //break;
             }
         }
         if (score == loadedAnswers.length) {
             result.textContent = `Správně!`;
-            link.disabled = false;
             button.textContent = "Zkusit znovu";
-            button.remove();
-            link.style.backgroundColor = "deepskyblue"
-            link.style.color = "white"
         }
     }
     else {
